@@ -1,0 +1,126 @@
+.commom_card {
+    width: 265px;
+    height: 600px;
+    margin: 10px;
+    gap: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    position: relative;
+    transition: all 0.3s;
+}
+
+.commom_card:hover {
+    transform: scale(1.1);
+    
+
+}
+
+.principal_img {
+    width: 100%;
+    height: 481px;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+
+.commom_card:hover > .principal_img {
+    
+    filter: brightness(0.5);
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.7);
+}
+
+
+.user_picture {
+    width: 90px;
+    height: 90px;
+    gap: 0px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 40px;
+    transition: all 0.3s;
+}
+
+
+.commom_card:hover > .user_picture {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.7);
+}
+
+.pink {
+    border: 8px solid #DA00ED
+}
+
+.orange {
+    border: 8px solid #FB6F0A
+}
+
+.green {
+    border: 8px solid #7DF288
+}
+
+
+.commom_card > p.user_name {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: 0%;
+    position: absolute;
+    bottom: 15px;
+}
+
+.commom_card > p.user_date {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: 0%;
+    position: absolute;
+    bottom: -10px;
+}
+
+
+@media (max-width: 600px) {
+    
+    .commom_card {
+        height: 368px;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+        
+    }
+    
+    .principal_img{
+        height: 255px;
+    }
+
+
+    .user_picture{
+        width: 70px;
+        height: 70px;
+    }
+
+    .commom_card:hover > .user_picture {
+        width: 90px;
+        height: 90px;
+    }
+
+    .pink {
+        border: 6px solid #DA00ED
+    }
+    
+    .orange {
+        border: 6px solid #FB6F0A
+    }
+    
+    .green {
+        border: 6px solid #7DF288
+    }
+}

@@ -1,0 +1,89 @@
+header {
+    width: 100%;
+    height: 100px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+.ulNav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin:0px;
+    gap: 10px;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.ulUser {
+    width: 100%;
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Media Queries para tamaños de pantalla más pequeños */
+@media (max-width: 1024px) {
+    /* Ocultar el ul dentro de .navLink */
+    .ulNav li {
+        display: none;
+    }
+
+    /* Ocultar todos los íconos de ul.ulUser excepto el último */
+    .ulUser li {
+        display: none;
+    }
+
+    .ulUser li:last-child {
+        display: flex; /* Mostrar el último ícono */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ocultar el ul dentro de .navLink */
+    .navLink ul {
+        display: none;
+    }
+
+    
+    /* Ocultar todos los íconos de ul.ulUser excepto el último */
+    .ulUser li {
+        display: none;
+    }
+
+    .ulUser li:last-child {
+        display: flex; /* Mostrar el último ícono */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ocultar el ul dentro de .navLink */
+    .navLink ul {
+        display: none;
+    }
+
+    /* Ocultar todos los íconos de ul.ulUser excepto el último */
+    .ulUser li {
+        display: none;
+    }
+
+    .ulUser li:last-child {
+        display: flex; /* Mostrar el último ícono */
+    }
+}
+
+
+  
+  
