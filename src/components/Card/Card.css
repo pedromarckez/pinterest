@@ -1,0 +1,82 @@
+.card {
+    width: 265px;
+    height: 600px;
+    gap: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    position: relative;
+    transition: all 0.4s;
+   
+}
+
+.card:hover {
+    transform: scale(1.035);
+}
+
+.card-image {
+    width: 100%;
+    height: 481px;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.4s;
+ }
+
+ .card:hover > .card-image{
+    filter: brightness(0.5);
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.7);
+ }
+
+
+.image-owner{
+    width: 60px;
+    height: 60px;
+    gap: 0px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 40px;
+    border: 6px solid red;
+    transition: all 0.4s;}
+
+.card:hover > .image-owner {
+    width: 90px;
+    height: 90px;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.7);
+}
+
+.owner-info {
+    position: absolute;
+    bottom: 0px;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: 0%;
+}
+
+@media (max-width: 600px) {
+    
+    .card {
+        height: 368px;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+        
+    }
+    
+    .card-image{
+        height: 255px;
+    }
+
+
+    .card:hover > .user_picture {
+        width: 90px;
+        height: 90px;
+    }
+
+
+}

@@ -1,0 +1,40 @@
+.commom_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:  123px;
+    height: 60px;
+    padding: 33px 70px;
+    top: 250px;
+    left: 63px;
+    border-radius: 30px;
+    color: var(--secondary-color);
+    background-color: var(--background-color-button);
+    border: none;
+    cursor: pointer;
+    position: absolute;  
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.05px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.card:hover > .commom_button {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .commom_button {
+        width: 92px;
+        height: 40px;
+        padding: 0;
+        top: 150px;
+        left: 85px;
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+}
