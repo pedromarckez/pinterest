@@ -23,7 +23,8 @@
     padding: 0;
     object-fit: cover;
     border-radius: 20px;
-    transition: all 0.4s;
+    transition: all 0.4s; 
+    
  }
 
  .card:hover > .card-image{
@@ -40,7 +41,9 @@
     position: absolute;
     bottom: 40px;
     border: 6px solid red;
-    transition: all 0.4s;}
+    transition: all 0.4s;
+    
+}
 
 .card:hover > .image-owner {
     width: 90px;
@@ -49,13 +52,16 @@
 }
 
 .owner-info {
+    
     position: absolute;
     bottom: 0px;
     font-family: var(--primary-font);
     font-weight: 400;
     font-size: 16px;
     line-height: 19.36px;
-    letter-spacing: 0%;
+    letter-spacing: 0%; 
+
+   
 }
 
 @media (max-width: 600px) {

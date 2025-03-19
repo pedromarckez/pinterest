@@ -2,6 +2,7 @@ import Card from "../components/Card/Card";
 import fetchApi from "./fetchApi";
 
 
+
 export default async function printImages(query){
     const homeContainer = document.querySelector(".images-container");
     
@@ -16,6 +17,7 @@ export default async function printImages(query){
             homeContainer.appendChild(newcard);
             
         });
+
     } catch (error) {
         console.log(error)
     }

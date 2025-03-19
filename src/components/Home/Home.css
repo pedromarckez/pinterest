@@ -3,7 +3,7 @@
     height: calc(100vh - 100px);
 }
 
-.images-container{
+ .images-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,4 +16,6 @@
     overflow: scroll;
     overflow-x: hidden;
     position: relative;
-}
+} 
+
+

@@ -12,4 +12,5 @@ app.append(Header(), Home());
 
 document.addEventListener("DOMContentLoaded", () => {
     printImages()
+    
 })

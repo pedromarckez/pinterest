@@ -5,8 +5,7 @@
     width:  123px;
     height: 60px;
     padding: 33px 70px;
-    top: 250px;
-    left: 63px;
+    position: absolute;
     border-radius: 30px;
     color: var(--secondary-color);
     background-color: var(--background-color-button);

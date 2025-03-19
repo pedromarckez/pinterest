@@ -45,6 +45,9 @@ export default function Header(){
     searchInput.addEventListener("keydown", async (e) => {
         if (e.key === "Enter"){
             await printImages(e.target.value);
+
+            searchInput.value = ""; 
+            searchInput.placeholder = "🔎 Buscar"; 
         }
     })
 
