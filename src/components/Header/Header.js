@@ -38,18 +38,40 @@ export default function Header(){
     nav.appendChild(ulNav);
     divSearch.appendChild(searchInput);
 
+    
+    let seHizoPrimeraBusqueda = false;
+
     logo.addEventListener("click", () => {
-        location.reload(); 
+        const primeraBusqueda = localStorage.getItem('primeraBusqueda');
+        console.log('Click en logo - Valor en localStorage:', primeraBusqueda);
+        
+        if (primeraBusqueda) {
+            printImages(primeraBusqueda);
+        } else {
+            printImages('Gatos');
+        }
+        
+        
+        searchInput.value = "";
+        searchInput.placeholder = "🔎 Buscar";
     });
 
     searchInput.addEventListener("keydown", async (e) => {
-        if (e.key === "Enter"){
-            await printImages(e.target.value);
-
-            searchInput.value = ""; 
-            searchInput.placeholder = "🔎 Buscar"; 
+        if (e.key === "Enter" && e.target.value.trim() !== '') {
+            const busqueda = e.target.value.trim();
+            
+            
+            if (!seHizoPrimeraBusqueda) {
+                localStorage.setItem('primeraBusqueda', busqueda);
+                seHizoPrimeraBusqueda = true;
+                console.log('Primera búsqueda guardada:', busqueda);
+            }
+            
+            await printImages(busqueda);
+            searchInput.value = "";
+            searchInput.placeholder = "🔎 Buscar";
         }
-    })
+    });
 
     return header
 }

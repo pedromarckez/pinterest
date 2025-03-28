@@ -1,7 +1,6 @@
 const API_KEY = 'WyXbZ0c23VHZuTc5HBgf0hK3Mojidezxb7Qi_9RCO0o';
 const url = 'https://api.unsplash.com/search/photos';
 
-
 export default async function fetchApi(query) {
     try {
         const response = await fetch(`${url}/?query=${query}&per_page=20&client_id=${API_KEY}`);
@@ -14,7 +13,7 @@ export default async function fetchApi(query) {
         console.log(res)
 
         if (res.results.length === 0) {
-            console.log(`No se encontraron resultados para "${query}". Buscando imágenes de gatos como predeterminado.`);
+            alert(`No se encontraron resultados para "${query}". Buscando imágenes de gatos como predeterminado.`);
             const fallbackResponse = await fetch(`${url}/?query=Gatos&per_page=20&client_id=${API_KEY}`);
 
             if (!fallbackResponse.ok) {
@@ -27,8 +26,7 @@ export default async function fetchApi(query) {
 
         return res.results;
     } catch (error) {
-        
-          console.log("No hemos encontrado lo que buscabas. Te enseñamos estos gatitos como disculpa")
+        console.log("No hemos encontrado lo que buscabas. Te enseñamos estos gatitos como disculpa")
     }
 }
 
